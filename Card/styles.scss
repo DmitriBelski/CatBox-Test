@@ -16,6 +16,7 @@
         border-bottom: 1px dashed $color;
         font-weight: 700;
         pointer-events: auto;
+        cursor: pointer;
       }
       i {
         color: $color;
@@ -32,6 +33,7 @@
     -webkit-clip-path: polygon(13.6% 0%, 100% 0, 100% 100%, 0 100%, 0% 9%);
     clip-path: polygon(13.3% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.9%);
     pointer-events: auto;
+    cursor: pointer;
 
     .front {
       position: absolute;
@@ -123,11 +125,14 @@
 
   &.disabled {
     @include card($disabled-color);
-    .back .front {
+    .back {
+      cursor: default;
+      .front {
       background: linear-gradient(to bottom, rgba(225,225,225,0.5) 0%,rgba(225,225,225,0.5) 100%), url('../assets/cat.png') $background no-repeat -28px 204px;
       background-size: 368px 360px;
-      .info {
-        opacity: 0.2;
+        .info {
+          opacity: 0.2;
+        }
       }
     }
     .under_text p {
