@@ -1,0 +1,33 @@
+@import "fonts";
+@import "variables";
+
+body {
+  font-family: 'exo 2 thin', 'exo thin', 'lato thin', 'roboto thin', sans-serif;
+  background: url('../assets/Pattern.png') repeat;
+  margin: 0;
+}
+
+.wrap {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%,  rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  pointer-events: none;
+}
+
+.title {  
+  color: #fff;
+
+  h1 {
+    font-size: 36px;
+    font-weight: normal;
+  }
+}

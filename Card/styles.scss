@@ -1,0 +1,138 @@
+@import "../scss/variables";
+
+@mixin card($color) {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: 'Trebuchet MS';
+  margin: 0 40px 15px 40px;
+
+  .under_text {
+    p {
+      font-size: 13px;
+      color: #fff;
+      a {
+        color: $color;
+        border-bottom: 1px dashed $color;
+        font-weight: 700;
+        pointer-events: auto;
+      }
+      i {
+        color: $color;
+      }
+    }
+  }
+
+  .back {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: $color;
+    border-radius: 12px;
+    -webkit-clip-path: polygon(13.6% 0%, 100% 0, 100% 100%, 0 100%, 0% 9%);
+    clip-path: polygon(13.3% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.9%);
+    pointer-events: auto;
+
+    .front {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 312px;
+      height: 472px;
+      border-radius: 8px;
+      -webkit-clip-path: polygon(13.3% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.7%);
+      clip-path: polygon(12.9% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.55%);
+      background: url('../assets/cat.png') $background no-repeat -28px 204px;
+      background-size: 368px 360px;
+      pointer-events: none;
+      
+      .info {
+        padding: 17px 0 0 47px;
+      
+        h1 {
+          font-size: 48px;
+          font-weight: 700;
+          margin: 5px 0 0 -3px;
+        }
+        
+        h3 {
+          font-size: 24px;
+          font-weight: 700;
+          margin: 0;
+        }
+        
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: $grey;
+        }
+        
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          color: $grey;
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .circle {  
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        width: 80px;
+        height: 80px;
+        background: $color;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+      
+        h1 {
+          font-size: 42px;
+          font-weight: normal;
+          margin: 6px 0 0 0;
+        }
+      
+        p {
+          font-size: 21px;
+          margin: -7px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  @include card($default-color);
+
+  &.hover {
+    @include card($default-hover-color);
+  }
+
+  &.selected {
+    @include card($selected-color);
+
+    &.hover {
+      @include card($selected-hover-color);
+      .back .front .info span {
+        color: $selected-hover-color;
+      }
+    }
+  }
+
+  &.disabled {
+    @include card($disabled-color);
+    .back .front {
+      background: linear-gradient(to bottom, rgba(225,225,225,0.5) 0%,rgba(225,225,225,0.5) 100%), url('../assets/cat.png') $background no-repeat -28px 204px;
+      background-size: 368px 360px;
+      .info {
+        opacity: 0.2;
+      }
+    }
+    .under_text p {
+      color: $sorry-color;
+    }
+  }
+}
+

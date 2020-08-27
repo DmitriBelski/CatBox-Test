@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'exo 2 thin';
+  src:  url('../assets/fonts/Exo2-Thin.woff2') format('woff2'),
+        url('../assets/fonts/Exo2-Thin.woff') format('woff'),
+        url('../assets/fonts/Exo2-Thin.eot?') format('eot'),
+        url('../assets/fonts/Exo2-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'exo thin';
+  src:  url('../assets/fonts/Exo-Thin.woff2') format('woff2'),
+        url('../assets/fonts/Exo-Thin.eot?') format('eot'),
+        url('../assets/fonts/Exo-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lato thin';
+  src:  url('../assets/fonts/Lato-Thin.woff2') format('woff2'),
+        url('../assets/fonts/Lato-Thin.woff?') format('woff'),
+        url('../assets/fonts/Lato-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'roboto thin';
+  src: url('../assets/fonts/Roboto-Thin.woff2') format('woff2');
+}
