@@ -2,7 +2,8 @@
 @import "variables";
 
 body {
-  font-family: 'exo 2 thin', 'exo thin', 'lato thin', 'roboto thin', sans-serif;
+  // font-family: 'exo 2 thin', 'exo thin', 'lato thin', 'roboto thin', sans-serif;
+  font-family: 'exo 2 thin', 'lato thin', sans-serif;
   background: url('../assets/Pattern.png') repeat;
   margin: 0;
 }
@@ -29,5 +30,6 @@ body {
   h1 {
     font-size: 36px;
     font-weight: normal;
+    text-align: center;
   }
 }

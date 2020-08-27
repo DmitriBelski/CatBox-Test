@@ -87,20 +87,22 @@ export class Card {
   }
 
   clickHandler(event) {
-    const {id } = event.target.dataset
-    if (this.isSelected(id)) {
-      this.$target[id-1].classList.remove('selected')
-      this.$under[id-1].innerHTML = `<p>${this.options.appeal[0]}<a data-id="${id}" data-type="appeal">${this.options.appeal[1]}</a><i>.</i></p>`
-      this.$unless[id-1].innerHTML = `<span data-type="unless">${this.options.slogan}</span>`
-    } else {
-      this.$target[id-1].classList.remove('hover')
-      this.$target[id-1].classList.add('selected')
-      this.$under[id-1].innerHTML = `<p>${this.options.items[id].data.description}</p>`
+    const {id} = event.target.dataset
+    if (!this.isDisabled(id)) {
+      if (this.isSelected(id)) {
+        this.$target[id-1].classList.remove('selected')
+        this.$under[id-1].innerHTML = `<p>${this.options.appeal[0]}<a data-id="${id}" data-type="appeal">${this.options.appeal[1]}</a><i>.</i></p>`
+        this.$unless[id-1].innerHTML = `<span data-type="unless">${this.options.slogan}</span>`
+      } else {
+        this.$target[id-1].classList.remove('hover')
+        this.$target[id-1].classList.add('selected')
+        this.$under[id-1].innerHTML = `<p>${this.options.items[id-1].data.description}</p>`
+      }
     }
   }
 
   mouseoverHandler(event) {
-    const {id } = event.target.dataset
+    const {id} = event.target.dataset
     this.$target[id-1].classList.add('hover')
     if (this.isSelected(id)) {
       this.$unless[id-1].innerHTML = `<span data-type="unless">${this.options.unless}</span>`
@@ -108,7 +110,7 @@ export class Card {
   }
 
   mouseoutHandler(event) {
-    const {id } = event.target.dataset
+    const {id} = event.target.dataset
     this.$target[id-1].classList.remove('hover')
     if (this.isSelected(id)) {
       this.$unless[id-1].innerHTML = `<span data-type="unless">${this.options.slogan}</span>`
