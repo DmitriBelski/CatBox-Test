@@ -44,7 +44,7 @@
       border-radius: 8px;
       -webkit-clip-path: polygon(13.3% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.7%);
       clip-path: polygon(12.9% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.55%);
-      background: url('../assets/cat.png') $background no-repeat -28px 204px;
+      background: url('../assets/img/cat.png') $background no-repeat -28px 204px;
       background-size: 368px 360px;
       pointer-events: none;
       
@@ -128,7 +128,7 @@
     .back {
       cursor: default;
       .front {
-      background: linear-gradient(to bottom, rgba(225,225,225,0.5) 0%,rgba(225,225,225,0.5) 100%), url('../assets/cat.png') $background no-repeat -28px 204px;
+      background: linear-gradient(to bottom, rgba(225,225,225,0.5) 0%,rgba(225,225,225,0.5) 100%), url('../assets/img/cat.png') $background no-repeat -28px 204px;
       background-size: 368px 360px;
         .info {
           opacity: 0.2;
