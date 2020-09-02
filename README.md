@@ -6,5 +6,5 @@ Online [DEMO](https://DmitriBelski.github.io)
 npm install -g parcel-bundler
 parcel index.html
 ```
-## task description
+## Task description
 ![task description](task.jpg)
