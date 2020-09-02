@@ -1,4 +1,4 @@
-тестовое задание на javaScript, html, css
+Tестовое задание на javaScript, html, css
 ===
 Online [DEMO](https://DmitriBelski.github.io)
 ## Installation
