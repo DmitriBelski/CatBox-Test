@@ -23,7 +23,11 @@ const getTemplate = (opt) => {
                   <span data-type="unless">${opt.slogan}</span>
                   <h1>${opt.brendname}</h1>
                   <h3>${item.data.flavor}</h3>
-                  <p><strong>${item.data.volume} </strong>${portion(item.data.volume)}<br/>${gift}<br/>${item.data.happy || ''}</p>
+                  <ul>
+                    <li><strong>${item.data.volume} </strong>${portion(item.data.volume)}</li>
+                    <li>${gift || ''}</li>
+                    <li>${item.data.happy || ''}</li>
+                  </ul>
                 </div>
                 <div class="circle">
                   <h1>${item.data.weight[0]}</h1>
@@ -31,14 +35,14 @@ const getTemplate = (opt) => {
                 </div>
               </div>
             </div>
-            <div class="under_text" data-type="under">
-              <p>${opt.appeal[0]}<a data-id="${item.id}">${opt.appeal[1]}</a><i>.</i></p>
+            <div class="under_text" data-type="under"> 
+              <p>${opt.appeal[0]}<a>${opt.appeal[1]}</a><i></p>
             </div>
           </div>
         `
       })
       .join('')
-
+      
   return items
 }
 

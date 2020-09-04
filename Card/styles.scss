@@ -11,6 +11,7 @@
     p {
       font-size: 13px;
       color: #fff;
+
       a {
         color: $color;
         border-bottom: 1px dashed $color;
@@ -18,8 +19,10 @@
         pointer-events: auto;
         cursor: pointer;
       }
-      i {
+      
+      i::after {
         color: $color;
+        content: '.';
       }
     }
   }
@@ -42,6 +45,8 @@
       width: 312px;
       height: 472px;
       border-radius: 8px;
+      padding: 17px 47px 0 47px;
+      box-sizing: border-box;
       -webkit-clip-path: polygon(13.3% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.7%);
       clip-path: polygon(12.9% 0%, 100% 0, 100% 100%, 0 100%, 0% 8.55%);
       background: url('../assets/img/cat.png') $background no-repeat -28px 204px;
@@ -49,7 +54,6 @@
       pointer-events: none;
       
       .info {
-        padding: 17px 0 0 47px;
       
         h1 {
           font-size: 48px;
@@ -68,13 +72,20 @@
           font-weight: 400;
           color: $grey;
         }
-        
-        p {
-          font-size: 14px;
-          font-weight: 400;
-          color: $grey;
-          strong {
-            font-weight: 700;
+
+        ul {
+          margin: 16px 0;
+          padding: 0;
+          list-style: none;
+
+          li {
+            font-size: 14px;
+            font-weight: 400;
+            color: $grey;
+
+            strong {
+              font-weight: 700;
+            }
           }
         }
       }
